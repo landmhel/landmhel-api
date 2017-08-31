@@ -116,3 +116,8 @@ bower_components
 ############################
 
 config/studio.json
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
