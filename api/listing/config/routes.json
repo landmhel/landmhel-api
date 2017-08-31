@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /listing": {
+      "controller": "Listing",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /listing/:id": {
+      "controller": "Listing",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /listing": {
+      "controller": "Listing",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /listing/:id": {
+      "controller": "Listing",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /listing/:id": {
+      "controller": "Listing",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /listing/:parentId/:relation": {
+      "controller": "Listing",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /listing/:parentId/:relation/:id": {
+      "controller": "Listing",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}
